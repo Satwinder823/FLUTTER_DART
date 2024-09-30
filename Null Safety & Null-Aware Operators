@@ -1,0 +1,78 @@
+// 1: Nullable Variables (String?)
+void main() {
+  String? name = null;
+  print(name);  // Output: null
+}
+//Explanation: The ? allows variables to hold a null value.
+
+// 2: Null-Aware Access (?.)
+void main() {
+  String? name = null;
+  print(name?.toUpperCase());  // Output: null
+}
+//Explanation: The ?. operator prevents null dereferencing by only accessing the property if the object is not null.
+
+//3: Default Value with ??
+void main() {
+  String? name = null;
+  print(name ?? 'Guest');  // Output: Guest
+}
+//Explanation: The ?? operator returns a default value if the variable is null.
+
+// 4: Null-Aware Assignment (??=)
+void main() {
+  String? name = null;
+  name ??= 'Guest';  // Assigns 'Guest' if name is null
+  print(name);
+}
+//Explanation: The ??= operator assigns a value if the variable is null.
+
+// 5: Using late Initialization
+late String description;
+void main() {
+  description = 'Dart is awesome';
+  print(description);
+}
+//Explanation: late variables are initialized later but must be non-null when used.
+
+// 6: Non-Nullable Assertion (!)
+void main() {
+  String? name = 'Alice';
+  print(name!);  // The `!` asserts that `name` is non-null
+}
+//Explanation: The ! operator asserts that the value is non-null.
+
+// 7: Safe Property Access
+class Person {
+  String? name;
+}
+
+void main() {
+  Person? person = null;
+  print(person?.name);  // Safe access with `?.`
+}
+//Explanation: ?. prevents calling properties on a null object.
+
+// 8: Chaining Null-Aware Operators
+void main() {
+  String? name = null;
+  print(name?.toUpperCase() ?? 'No name provided');  // Output: No name provided
+}
+//Explanation: Combining ?. and ?? for safe operations.
+
+// 9: Non-Nullable Return Values
+String getGreeting(String? name) {
+  return name ?? 'Hello, Guest!';
+}
+
+void main() {
+  print(getGreeting(null));  // Output: Hello, Guest!
+}
+//Explanation: The function returns a non-nullable value by handling the null input.
+
+//Example 10: Nullable Lists
+void main() {
+  List<String>? names = null;
+  print(names ?? []);  // Output: []
+}
+//Explanation: ?? provides a default empty list when the original list is null.
