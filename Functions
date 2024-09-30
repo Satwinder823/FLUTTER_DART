@@ -1,0 +1,100 @@
+// 1: Basic Function
+void greet(String name) {
+  print('Hello, $name!');
+}
+
+void main() {
+  greet('Alice');  // Output: Hello, Alice!
+}
+//Explanation: This function takes a String parameter and prints a greeting.
+
+// 2: Function with Return Value
+int add(int a, int b) {
+  return a + b;
+}
+
+void main() {
+  var result = add(5, 3);
+  print(result);  // Output: 8
+}
+//Explanation: This function returns the sum of two integers.
+
+// 3: Optional Parameters
+void greet(String name, {String? title}) {
+  if (title != null) {
+    print('Hello, $title $name!');
+  } else {
+    print('Hello, $name!');
+  }
+}
+
+void main() {
+  greet('Alice', title: 'Dr.');  // Output: Hello, Dr. Alice!
+}
+//Explanation: This function uses optional named parameters for flexibility.
+
+// 4: Default Parameter Values
+void greet(String name, {String title = 'Mr.'}) {
+  print('Hello, $title $name!');
+}
+
+void main() {
+  greet('Alice');            // Output: Hello, Mr. Alice!
+  greet('Bob', title: 'Dr.');  // Output: Hello, Dr. Bob!
+}
+//Explanation: This function sets a default value for the title parameter.
+
+// 5: Arrow Function
+int multiply(int a, int b) => a * b;
+
+void main() {
+  print(multiply(4, 5));  // Output: 20
+}
+//Explanation: An arrow function is a concise way to write a function that returns a single expression.
+
+// 6: Anonymous Function
+void main() {
+  var square = (int x) => x * x;
+  print(square(5));  // Output: 25
+}
+//Explanation: An anonymous function that squares a number is defined and called.
+
+// 7: Function as First-Class Citizen
+void main() {
+  void sayHello() {
+    print('Hello!');
+  }
+
+  var greet = sayHello;  // Assigning function to a variable
+  greet();  // Output: Hello!
+}
+//Explanation: Functions are first-class citizens and can be assigned to variables.
+
+
+// 8: Function with List as Parameter
+void printList(List<String> items) {
+  for (var item in items) {
+    print(item);
+  }
+}
+
+void main() {
+  printList(['Apple', 'Banana', 'Cherry']);
+  // Output:
+  // Apple
+  // Banana
+  // Cherry
+}
+//Explanation: Passing a list as a parameter to a function.
+
+// 9: Recursive Function
+int factorial(int n) {
+  if (n == 0) return 1;
+  return n * factorial(n - 1);
+}
+
+void main() {
+  print(factorial(5));  // Output: 120
+}
+//Explanation: A recursive function to calculate the factorial of a number.
+
