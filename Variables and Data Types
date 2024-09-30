@@ -1,0 +1,84 @@
+//1: Declaring Variables with Explicit Types
+void main() {
+  int age = 25;
+  double height = 5.9;
+  bool isStudent = true;
+  String name = 'John';
+
+  print('Name: $name, Age: $age, Height: $height, Student: $isStudent');
+}
+//Explanation: Explicit declaration of variables with int, double, bool, and String types.
+
+
+//2: Using var (Type Inference)
+void main() {
+  var city = 'Paris';   // inferred as String
+  var population = 2148327;  // inferred as int
+
+  print('City: $city, Population: $population');
+}
+//Explanation: Dart infers the type of var based on the value assigned.
+
+// 3: Using dynamic
+void main() {
+  dynamic value = 42;
+  print(value);  // prints: 42
+
+  value = 'hello world!';
+  print(value);  // prints: hello world!
+}
+//Explanation: The dynamic type allows changing the variable's type at runtime.
+
+//4: Type Conversion (String to int)
+void main() {
+  String ageString = '30';
+  int age = int.parse(ageString);  // converting String to int
+  print(age);
+}
+//Explanation: Converts a String to an int using int.parse().
+
+//5: Final and Const Variables
+void main() {
+  final birthYear = 1990;
+  const pi = 3.14159;
+
+  print('Birth Year: $birthYear, Pi: $pi');
+}
+//Explanation: final allows assigning once, while const is for compile-time constants.
+
+// 6: Declaring List
+void main() {
+  List<int> numbers = [1, 2, 3, 4, 5];
+  print(numbers);
+}
+//Explanation: List declaration in Dart.
+
+// 7: Declaring a Map (Dictionary)
+void main() {
+  Map<String, int> scores = {'Alice': 90, 'Bob': 80};
+  print(scores);
+}
+//Explanation: Maps are used to store key-value pairs.
+
+// 8: Using Sets (Unique Values)
+void main() {
+  Set<int> uniqueNumbers = {1, 2, 3, 3, 2};
+  print(uniqueNumbers);  // Output: {1, 2, 3}
+}
+//Explanation: Sets store unique values and remove duplicates.
+
+//9: Nullable Variables (String?)
+void main() {
+  String? nickname = null;  // Nullable String
+  print(nickname);  // Output: null
+}
+//Explanation: The ? allows a variable to be null.
+
+// 10: Const Collections
+void main() {
+  const List<String> names = ['Alice', 'Bob'];
+  // names.add('Charlie');  // This will cause an error since it's a const List
+  print(names);
+}
+//Explanation: Constant collections can’t be modified after their creation.
+
