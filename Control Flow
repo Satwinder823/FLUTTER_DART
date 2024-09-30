@@ -1,0 +1,108 @@
+// 1: Basic if-else Statement
+void main() {
+  int score = 85;
+
+  if (score > 90) {
+    print('Grade A');
+  } else if (score > 80) {
+    print('Grade B');
+  } else {
+    print('Grade C');
+  }
+}
+//Explanation: if-else controls the flow of execution based on conditions.
+
+// 2: for Loop
+void main() {
+  for (int i = 1; i <= 5; i++) {
+    print(i);
+  }
+}
+//Explanation: A for loop to iterate through a block of code multiple times.
+
+//3: while Loop
+void main() {
+  int i = 5;
+
+  while (i > 0) {
+    print(i);
+    i--;
+  }
+}
+//Explanation: A while loop executes while the condition is true.
+
+// 4: do-while Loop
+void main() {
+  int i = 0;
+  
+  do {
+    print(i);
+    i++;
+  } while (i < 5);
+}
+//Explanation: A do-while loop ensures the block is executed at least once.
+
+// 5: break Statement
+void main() {
+  for (int i = 1; i <= 5; i++) {
+    if (i == 3) {
+      break;  // Exit loop when i equals 3
+    }
+    print(i);
+  }
+}
+//Explanation: break is used to exit a loop prematurely.
+
+// 6: continue Statement
+void main() {
+  for (int i = 1; i <= 5; i++) {
+    if (i == 3) {
+      continue;  // Skip the iteration when i equals 3
+    }
+    print(i);
+  }
+}
+//Explanation: continue skips the current iteration and moves to the next.
+
+// 7: switch Statement
+void main() {
+  int day = 2;
+
+  switch (day) {
+    case 1:
+      print('Monday');
+      break;
+    case 2:
+      print('Tuesday');
+      break;
+    default:
+      print('Other day');
+  }
+}
+//Explanation: switch is used to test multiple conditions.
+
+// 8: Nested if Statement
+void main() {
+  int age = 18;
+
+  if (age >= 18) {
+    if (age >= 21) {
+      print('Eligible to drink');
+    } else {
+      print('Eligible to vote');
+    }
+  } else {
+    print('Not eligible to vote');
+  }
+}
+//Explanation: Shows how to nest if statements for multiple conditions.
+
+// 9: Ternary Operator
+void main() {
+  int age = 20;
+  String result = age >= 18 ? 'Adult' : 'Minor';
+  
+  print(result);
+}
+//Explanation: The ternary operator provides a shorthand for if-else.
+
